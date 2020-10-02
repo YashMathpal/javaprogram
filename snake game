@@ -13,6 +13,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.Map;
+import javax.swing.Levels;
 import javax.swing.Timer;
 
 public class Board extends JPanel implements ActionListener {
@@ -74,7 +76,7 @@ public class Board extends JPanel implements ActionListener {
 
         dots = 3;
 
-        for (int z = 0; z < dots; z++) {
+        for (int z = 0 ; z < dots; z++) {
             x[z] = 50 - z * 10;
             y[z] = 50;
         }
@@ -133,7 +135,6 @@ public class Board extends JPanel implements ActionListener {
             locateApple();
         }
     }
-
     private void move() {
 
         for (int z = dots; z > 0; z--) {
@@ -224,7 +225,6 @@ public class Board extends JPanel implements ActionListener {
             }
 
             if ((key == KeyEvent.VK_RIGHT) && (!leftDirection)) {
-                rightDirection = true;
                 upDirection = false;
                 downDirection = false;
             }
